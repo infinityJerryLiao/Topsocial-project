@@ -1,0 +1,16 @@
+.profilebar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: calc(20dvh - 5.4rem);
+  min-width: 200px;
+  overflow-x: hidden;
+  margin-top: 1rem;
+  background: var(--left-profile-background-color);
+  border-radius: var(--left-profile-radius);
+  padding: 1rem;
+}
+
+.profile-word {
+  margin-left: 1rem;
+}
