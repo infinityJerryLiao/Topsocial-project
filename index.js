@@ -1,9 +1,14 @@
 import './index.css';
-import { sidebar as sd } from "./data/db.json";
-//import { sidebar } from "./data/db.json";
+import { navbar, navbar_container, main, main_container, main_left, sideBar } from './src/js/common';
+
+console.log(sideBar);
+// console.log(navbar, navbar_container);
+
 
 const mainLeft = document.querySelector('main .container .main-left');
 mainLeft.innerHTML = null;
+
+
 
 // console.log(sd);
 
@@ -36,37 +41,6 @@ p.textContent = '@EldenRing';
 profileWord.appendChild(p);
 
 
-//SideBar
-const sideBar = document.createElement('div');
-sideBar.classList.add('sidebar');
-mainLeft.appendChild(sideBar);
-
-sd.forEach(item => {
-  const sidebarItem = document.createElement('a')
-  sidebarItem.classList.add('menu-item');
-  const span = document.createElement('span');
-  const i = document.createElement('i');
-  item.icon_class_list.forEach(iconClass => {
-    i.classList.add(iconClass);
-  });
-  sidebarItem.classList.add(item.name)
-  const h2 = document.createElement('h2');
-  h2.textContent = item.name;
-
-  span.appendChild(i);
-
-  sidebarItem.appendChild(span);
-  sidebarItem.appendChild(h2);
-
-
-  sideBar.appendChild(sidebarItem);
-});
-
-const homeDom = document.querySelector('.Home');
-homeDom.addEventListener("click", () => {
-  homeDom.classList.toggle('btn');
-  homeDom.classList.toggle('btn-primary');
-})
 
 
 //Create Post Button
@@ -75,7 +49,6 @@ leftButton.classList.add('left-button');
 mainLeft.appendChild(leftButton);
 
 const label = document.createElement('label');
-// label.htmlFor = 'create-post';
 label.htmlFor = 'create-post';
 label.classList.add('btn');
 label.classList.add('btn-primary');
