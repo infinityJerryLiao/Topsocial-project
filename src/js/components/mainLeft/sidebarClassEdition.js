@@ -11,7 +11,9 @@ export default class Sidebar {
 
 
   build() {
-    this.#createSidebar()
+    this.#createSidebar();
+    console.log(this.dom);
+    document.querySelector('body').appendChild(this.dom);
   }
 
   #createSidebar() {
